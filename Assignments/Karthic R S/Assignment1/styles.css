@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: burlywood;
+}
+
+.container {
+    background-color: white;
+    width: 900px;
+    height: 600px;
+    margin-left: 350px;
+    margin-right: 350px;
+    margin-top: 60px;
+    border-radius: 15px
+}
+
+.profile {
+    margin-left: 50px;
+    width: auto;
+    flex-direction: row;
+    display: flex;
+    border-bottom: solid 2px;
+    padding-bottom: 50px;
+}
+
+.profimg {
+    width: 150px;
+    margin-top: 50px;
+    border-radius: 100%;
+
+}
+
+.name {
+    margin-top: 30px;
+    margin-left: 20px;
+    font-size: 17px;
+    width: 400px;
+
+}
+
+.fname {
+    font-weight: 600;
+}
+
+.degree {
+    font-weight: 500;
+    font-style: italic;
+}
+
+.about {
+    font-size: medium;
+    text-align: justify;
+    background-color: aliceblue;
+}
+
+.contact {
+    background-color: #d9dbde;
+    width: 250px;
+    border-radius: 10px;
+}
+
+.conitems {
+    margin-left: 20px;
+}
+
+.row2 {
+    margin-top: 20px;
+}
+
+.profile1 {
+    margin-left: 70px;
+    width: 100%;
+    flex-direction: row;
+    display: flex;
+    margin-top: 0px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.iname {
+    font-weight: 600;
+}
+
+.year {
+    font-style: italic;
+}
+
+.skills {
+    margin-left: 60px;
+}
+
+.skill {
+    background-color: cadetblue;
+    color: white;
+    padding: 1%;
+    text-align: right;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.perce {
+    width: 200px;
+}
