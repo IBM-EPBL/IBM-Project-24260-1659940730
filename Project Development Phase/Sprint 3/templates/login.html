@@ -1,0 +1,19 @@
+{% extends 'header.html' %}
+
+{% block body %}
+<div class="container-fluid"> 
+	{% from '_formhelpers.html' import render_field %}
+	<form method=post action="/login/">
+		<dl>
+			{{render_field(form.username)}}
+			{{render_field(form.password)}}
+		</dl>
+		<p><input class="btn btn-success" type=submit value=Login></p>
+	</form>
+	<h5><a  href="{{url_for('forget_password')}}"><span style="color:rgb(227, 95, 39);"></span> <span style="color:rgb(23, 78, 230);font-weight: bold;font-size: 12px;">forget password ?</span></a></h5>
+
+	{% if error %}    <!-- error is a variable here -->
+		<p class="error"><strong>Error:</strong>{{error}}</p>
+	{% endif %}
+</div>
+{% endblock %}
