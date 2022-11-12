@@ -253,7 +253,7 @@ def forget_password():
                     _email = None
                 else:
                     session['username'] = dictionary["USERNAME"]
-                    msg = Message('Hello, your personal expense manager app!', sender = 'ajaibhalajisakthivel@gmail.com', recipients = [_email])
+                    msg = Message('Hello, your personal expense manager app!', sender = '<admin-mail-id>', recipients = [_email])
                     secret_key = random.randint(1000,10000)
                     session['otp'] = secret_key
                     session.modified = True
