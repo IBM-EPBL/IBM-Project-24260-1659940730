@@ -16,8 +16,8 @@ app.config.update(
     MAIL_PORT=465,
     MAIL_USE_TLS=False,
     MAIL_USE_SSL=True,
-    MAIL_USERNAME = 'ajaibhalajisakthivel@gmail.com',
-    MAIL_PASSWORD = 'djjzzvcbfqdlsgys'   #stored as environment variable.
+    MAIL_USERNAME = '<admin-mail-id>',
+    MAIL_PASSWORD = '<admin-mail-pwd>'   #stored as environment variable.
 )
 mail = Mail(app)
 conn=ibm_db.connect('DATABASE=bludb;HOSTNAME=55fbc997-9266-4331-afd3-888b05e734c0.bs2io90l08kqb1od8lcg.databases.appdomain.cloud;PORT=31929;SECURITY=SSL;SSLServerCertificate=DigiCertGlobalRootCA.crt;UID=wxv94313;PWD=jTzByNGi2TldWDS1','','')
@@ -141,7 +141,7 @@ def dashboard():
         ibm_db.bind_param(stmt3, 1, session["username"])
         ibm_db.execute(stmt3)
         profiles = ibm_db.fetch_assoc(stmt3)
-        msg = Message('Hello, Reminder from Personal expense manager app!', sender = 'ajaibhalajisakthivel@gmail.com', recipients = [profiles["EMAIL"]])
+        msg = Message('Hello, Reminder from Personal expense manager app!', sender = '<admin-mail-id>', recipients = [profiles["EMAIL"]])
         msg.body = "Your balance is getting low so take care of your expenses...!!!\nAvailable Balance:Rs.{}\nThanks & Regards,\n\nPersonal Expense Tracker".format(availablebalance)
         mail.send(msg)
         flash("Your balance is getting low so take care of your expenses...!!!","warning")
